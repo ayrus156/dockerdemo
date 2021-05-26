@@ -1,5 +1,2 @@
-FROM ubuntu
-RUN apt-get update 
-RUN apt-get install nginx -y
-CMD ["nginx" , "-g", "daemon off;"]
-CMD echo "This is demo"
+FROM nginx:latest
+COPY ./index.html /usr/share/nginx/html/index.html
